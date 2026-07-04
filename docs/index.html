@@ -3,12 +3,17 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="manifest.json">
-  <title>Simple PWA</title>
+  <title>Code and Corners</title>
 </head>
 <body>
-  <h1>Hello PWA 👋</h1>
-  <p>Test 1</p>
+  <h1>Code and Corners👋</h1>
+  <p>Code and corners blurb</p>
+<div id="time"></div>
 
+<script>
+const now = new Date();
+document.getElementById("time").innerText ="Start of ride:" + now.toLocaleTimeString();
+</script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js');
