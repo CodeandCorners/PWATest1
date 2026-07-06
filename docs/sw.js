@@ -1,4 +1,4 @@
-const CACHE = "Test 1";
+const CACHE = "Test 2";
 
 const FILES = [
   "/",
