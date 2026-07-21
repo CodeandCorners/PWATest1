@@ -3,6 +3,7 @@ const CACHE = "Test 2";
 const FILES = [
   "/",
   "/index.html",
+  "/message.html",
   "/manifest.json",
   "/icon.png"
 ];

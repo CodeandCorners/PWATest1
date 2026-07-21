@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Save Message</title>
+</head>
+
+<body>
+
+<h2>Enter Message</h2>
+
+<input id="myMessage" type="text" size="40">
+
+<button onclick="saveMessage()">
+Save
+</button>
+
+<h3>Saved Value</h3>
+
+<p id="savedMessage"></p>
+
+<a href="index.html">Back to main page</a>
+
+<script>
+
+const STORAGE_KEY = "savedMessage";
+
+window.onload = function () {
+
+    const value = localStorage.getItem(STORAGE_KEY);
+
+    if (value) {
+        document.getElementById("myMessage").value = value;
+        document.getElementById("savedMessage").innerText = value;
+    }
+
+}
+
+function saveMessage() {
+
+    const value = document.getElementById("myMessage").value;
+
+    localStorage.setItem(STORAGE_KEY, value);
+
+    document.getElementById("savedMessage").innerText = value;
+
+}
+
+</script>
+
+</body>
+</html>
